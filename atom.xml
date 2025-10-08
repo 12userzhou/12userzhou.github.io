@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://12userzhou.github.io</id>
+    <title>我不是帅猴</title>
+    <updated>2025-10-08T10:24:48.983Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://12userzhou.github.io"/>
+    <link rel="self" href="https://12userzhou.github.io/atom.xml"/>
+    <subtitle>以后上课别跟我说话</subtitle>
+    <logo>https://12userzhou.github.io/images/avatar.png</logo>
+    <icon>https://12userzhou.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2025, 我不是帅猴</rights>
+</feed>

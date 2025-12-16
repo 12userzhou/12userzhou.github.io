@@ -1,0 +1,198 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title> 基于SSM的共享单车管理系统实训总结 | 我不是帅猴</title>
+<link rel="shortcut icon" href="https://12userzhou.github.io/favicon.ico?v=1765883017899">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://12userzhou.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title=" 基于SSM的共享单车管理系统实训总结 | 我不是帅猴 - Atom Feed" href="https://12userzhou.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="本次实训有着明确的核心目的：深入了解软件开发从需求分析、系统设计、编码实现、测试到部署的完整流程，将课堂所学的Java EE、SSM框架等知识技能转化为实际开发能力，在具体项目中解决技术难题，积累工程实践经验。围绕共享单车运营中的车辆管理、..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://12userzhou.github.io">
+  <img class="avatar" src="https://12userzhou.github.io/images/avatar.png?v=1765883017899" alt="">
+  </a>
+  <h1 class="site-title">
+    我不是帅猴
+  </h1>
+  <p class="site-description">
+    以后上课别跟我说话
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+               基于SSM的共享单车管理系统实训总结
+            </h2>
+            <div class="post-info">
+              <span>
+                2025-12-16
+              </span>
+              <span>
+                6 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>本次实训有着明确的核心目的：深入了解软件开发从需求分析、系统设计、编码实现、测试到部署的完整流程，将课堂所学的Java EE、SSM框架等知识技能转化为实际开发能力，在具体项目中解决技术难题，积累工程实践经验。围绕共享单车运营中的车辆管理、用户服务、订单统计等核心需求，我们运用Spring、SpringMVC、MyBatis三大框架开发完整系统模块，不仅深化了对技术的理解，更提升了综合应用能力，现将实训情况总结如下。<br>
+实训内容围绕软件开发全流程有序展开，首要环节是需求分析与系统设计。我们通过调研哈啰、美团等主流共享单车平台的运营逻辑，结合实训要求明确系统核心需求：用户管理需实现注册、登录、信息修改及权限区分；车辆管理需涵盖车辆信息录入、状态更新（正常/故障）、位置查询；订单管理要支持订单生成、费用计算、状态追踪；数据统计则需为管理员提供用户活跃度、车辆使用率等分析数据。明确需求后，我们基于SSM框架完成架构设计，采用分层开发思想：MyBatis负责数据持久层，封装数据库CRUD操作；Spring作为核心容器，实现Bean的管理与依赖注入，降低模块耦合；SpringMVC负责控制层，处理前端请求并完成视图跳转。此阶段我掌握了需求文档撰写规范，理解了SSM框架各层的协作机制。</p>
+<p>数据库设计与管理是衔接需求与开发的关键。我们基于需求分析中的实体（用户、车辆、订单等）构建实体-关系模型，使用MySQL设计数据库。设计时重点关注字段合理性，如车辆表设置“车辆编号”“状态”“经度”“纬度”等核心字段，订单表关联用户ID与车辆ID实现数据联动；同时优化表结构，通过建立索引提升查询效率，选用合适的数据类型减少冗余。通过MySQL的可视化工具Navicat完成表创建与初始化数据录入，为后续开发提供稳定的数据支撑，此阶段我熟练掌握了数据库设计的基本方法与MySQL的操作技巧。</p>
+<p>用户界面设计与实现及主体功能开发是实训的核心内容。UI设计上，我们以“简洁易用”为原则，采用Bootstrap框架搭建响应式页面，区分普通用户与管理员两种视角：用户端聚焦车辆查询、扫码开锁、订单查看等核心操作；管理员端侧重数据统计图表、车辆批量管理等功能。设计中重点优化人机交互体验，如车辆列表页添加快速筛选按钮，订单页实时显示费用计算结果，避免用户操作流程冗余。主体功能实现阶段，我重点参与车辆管理与订单模块的编码工作。在车辆管理模块中，通过MyBatis的XML映射文件编写复杂查询语句，实现车辆编号模糊查询、状态筛选等功能；利用Spring的事务管理机制，确保车辆信息修改时的数据一致性。订单模块开发中，SpringMVC的拦截器完成用户登录状态校验，避免未授权访问；通过Jackson工具实现JSON数据转换，满足前后端数据交互需求。测试环节我们采用“JUnit单元测试+黑盒测试”结合的方式，单元测试针对Service层核心方法编写测试用例，验证业务逻辑正确性；黑盒测试模拟用户操作场景，覆盖登录、下单、还车等关键流程，对测试未通过的用例（如订单状态更新异常），通过调试代码、优化SQL语句完成修复</p>
+<p>系统测试与部署阶段是对开发成果的全面检验与落地。测试中除延续前期的单元测试与黑盒测试外，新增压力测试场景，模拟多用户同时下单的情况，确保系统稳定性。针对测试发现的订单状态更新延迟问题，通过调整Spring的事务传播属性与MyBatis的缓存配置得以解决；针对前端页面响应缓慢问题，优化静态资源加载方式，引入资源压缩技术。部署环节我们采用Tomcat作为Web服务器，将系统打包为WAR包部署，配置MySQL数据库连接信息，完成从开发环境到部署环境的迁移。此阶段我熟悉了JUnit单元测试的使用，掌握了常见性能优化手段与项目部署流程。</p>
+<p>本次实训让我收获颇丰。技术上，我熟练掌握了SSM框架的整合流程，能独立完成从数据库设计到接口开发的全流程工作；工程能力上，通过Git版本控制工具与团队协作，理解了软件开发的规范化流程；思维上，培养了&quot;需求导向&quot;的开发理念，学会从用户角度思考功能设计。</p>
+<p>同时我也认识到自身不足：对Spring的AOP原理理解不够深入，异常处理机制设计不够完善；前端页面交互设计能力较弱。后续我将重点钻研Spring核心原理，学习Vue.js框架提升前后端融合开发能力。</p>
+<p>此次实训将理论知识转化为实践能力，让我深刻体会到软件开发的严谨性与团队协作的重要性。未来我将以此次实训为基础，持续夯实技术功底，提升自身综合素养，为成为合格的开发人员积累力量。</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://12userzhou.github.io/post/xiao-yuan-lun-tan-xi-tong-min-jie-kai-fa-de-xu-qiu-bian-geng-guan-li-ce-lue/">
+              <h3 class="post-title">
+                校园论坛系统敏捷开发的需求变更管理策略
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'Ov23lismntowktWbVXcg',
+    clientSecret: '303626aa4f7f612036cf32902c6c6b85d541ef3c',
+    repo: '12userzhou.github.io',
+    owner: '12userzhou',
+    admin: ['12userzhou'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://12userzhou.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
